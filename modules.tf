@@ -1,5 +1,5 @@
-module "vpc" {
-  source          = "./vpc"
+module "infra" {
+  source          = "./infra"
   project         = local.project
   region          = var.region
   ssh_key_name    = var.ssh_key_name

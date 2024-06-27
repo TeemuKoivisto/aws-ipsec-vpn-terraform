@@ -20,16 +20,13 @@ module "vpn_sg" {
   source = "terraform-aws-modules/security-group/aws"
 
   name        = "${var.project}-sg"
-  description = "VPN SG only accessible by whitelisted IPs"
-  # vpc_id      = module.vpc.vpc_id
+  description = "VPN SG"
 
-  # ingress_rules = ["https-443-tcp", "http-80-tcp", "ssh-tcp", "all-icmp"]
-  # ingress_cidr_blocks = ["0.0.0.0/0"]
   egress_rules = ["all-all"]
 }
 
 resource "aws_security_group_rule" "vpn_ingress" {
-  description = "PostgreSQL access for VPC, API and local machine"
+  description = "Restrict access to only whitelisted IPs"
   type        = "ingress"
   from_port   = 0
   to_port     = 65535
