@@ -3,7 +3,7 @@
 To run them, you need [Terraform](https://www.terraform.io/) (`brew install terraform`) and AWS credentials.
 
 1. Create S3 bucket in a region of your desire
-2. Add your AWS credentials (VPC & EC2 access) and other stuff to `.env`: `cp .env-example .env`
+2. Add your AWS credentials (VPC & EC2 access), region, ssh key and ip to `.env`: `cp .env-example .env`
 3. Add the S3 bucket to `backend.conf`
 4. Initialize Terraform: `./ex.sh tf init -backend-config=backend.conf`
 5. Apply the stacks: `./ex.sh tf apply`

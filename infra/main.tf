@@ -30,7 +30,7 @@ resource "aws_security_group_rule" "vpn_ingress" {
   type        = "ingress"
   from_port   = 0
   to_port     = 65535
-  protocol    = "tcp"
+  protocol    = -1
   cidr_blocks = flatten([
     [for ip in var.whitelisted_ips : "${ip}/32"],
   ])
