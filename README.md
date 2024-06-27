@@ -1,4 +1,4 @@
-# AWS ipsec VPN terraform stack
+# [AWS ipsec VPN terraform stack](https://github.com/TeemuKoivisto/aws-ipsec-vpn-terraform)
 
 To run them, you need [Terraform](https://www.terraform.io/) (`brew install terraform`) and AWS credentials.
 
