@@ -7,3 +7,6 @@ variable "ssh_key_name" {
 variable "whitelisted_ips" {
   type = list(string)
 }
+variable "client_public_key" {
+  type = string
+}

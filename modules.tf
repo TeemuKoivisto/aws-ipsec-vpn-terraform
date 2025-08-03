@@ -1,7 +1,8 @@
 module "infra" {
-  source          = "./infra"
-  project         = local.project
-  region          = var.region
-  ssh_key_name    = var.ssh_key_name
-  whitelisted_ips = var.whitelisted_ips
+  source            = "./infra"
+  project           = local.project
+  region            = var.region
+  ssh_key_name      = var.ssh_key_name
+  whitelisted_ips   = var.whitelisted_ips
+  client_public_key = var.client_public_key
 }

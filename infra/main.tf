@@ -7,7 +7,8 @@ module "ec2_instance" {
   key_name               = var.ssh_key_name
   vpc_security_group_ids = [module.vpn_sg.security_group_id]
   # Ubuntu 22.04
-  ami = "ami-04e601abe3e1a910f"
+  ami       = "ami-04e601abe3e1a910f"
+  user_data = replace(file("${path.module}/wireguard.sh"), "$CLIENT_PUBLIC_KEY", var.client_public_key)
 
   monitoring = true
 
